@@ -24,7 +24,7 @@ const Blocklist = () => {
     useEffect(function () {
         const fetchData = async function () {
             try {
-                const response = await fetch('http://localhost:4000/allUsers', {
+                const response = await fetch('https://socialmedia-backend.vercel.app/allUsers', {
                     method: 'GET',
                     credentials: 'include'
                 })
@@ -50,7 +50,7 @@ const Blocklist = () => {
     useEffect(function () {
         const fetchData = async function () {
             try {
-                const response = await fetch('http://localhost:4000/blocklist', {
+                const response = await fetch('https://socialmedia-backend.vercel.app/blocklist', {
                     method: 'GET',
                     credentials: 'include'
                 })
@@ -73,7 +73,7 @@ const Blocklist = () => {
     const handleBlock = async function (id) {
         try {
             console.log('click')
-            let response = await fetch(`http://localhost:4000/block/${id}`, {
+            let response = await fetch(`https://socialmedia-backend.vercel.app/block/${id}`, {
                 method: 'GET',
                 credentials: 'include'
             })
@@ -94,7 +94,7 @@ const Blocklist = () => {
     const handleUnblock = async function (id) {
         try {
             console.log('click')
-            let response = await fetch(`http://localhost:4000/unblock/${id}`, {
+            let response = await fetch(`https://socialmedia-backend.vercel.app/unblock/${id}`, {
                 method: 'GET',
                 credentials: 'include'
             })
@@ -135,7 +135,7 @@ const Blocklist = () => {
                                         <tr key={info._id}>
                                             {auth.user._id !== info._id ?
                                                 <>
-                                                    <td className='w-fit'><img className='w-[50px] h-[50px] rounded-[30px]' src={`http://localhost:4000/${info.profileImage}`}></img></td>
+                                                    <td className='w-fit'><img className='w-[50px] h-[50px] rounded-[30px]' src={`https://socialmedia-backend.vercel.app/${info.profileImage}`}></img></td>
                                                     <td>{info.name}</td>
                                                     <td className='flex gap-2'>
                                                         <button onClick={() => handleBlock(info._id)} className='btn btn-primary text-white transform transition-transform duration-200 hover:scale-105'>Block</button>

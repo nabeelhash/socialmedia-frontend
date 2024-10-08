@@ -15,7 +15,7 @@ const Single = () => {
     useEffect(function(){
         const fetchData = async function(){
             try{
-                const response = await fetch(`http://localhost:4000/single/${id}`,{
+                const response = await fetch(`https://socialmedia-backend.vercel.app/single/${id}`,{
                     method: 'GET',
                     credentials: 'include'
                 })

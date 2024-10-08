@@ -23,7 +23,7 @@ const SingleBlog = () => {
     useEffect(function () {
         const fetchData = async function () {
             try {
-                const response = await fetch(`http://localhost:4000/singlePost/${id}`, {
+                const response = await fetch(`https://socialmedia-backend.vercel.app/singlePost/${id}`, {
                     method: 'GET',
                     credentials: 'include'
                 })
@@ -49,7 +49,7 @@ const SingleBlog = () => {
     useEffect(function () {
         const fetchData = async function () {
             try {
-                const response = await fetch(`http://localhost:4000/getComment/${id}`, {
+                const response = await fetch(`https://socialmedia-backend.vercel.app/getComment/${id}`, {
                     method: 'GET',
                     credentials: 'include'
                 })
@@ -73,7 +73,7 @@ const SingleBlog = () => {
     const handleComment = async function (commentId) {
         console.log('')
         try {
-            const response = await fetch(`http://localhost:4000/deleteComment/${id}/${commentId}`, {
+            const response = await fetch(`https://socialmedia-backend.vercel.app/deleteComment/${id}/${commentId}`, {
                 method: 'DELETE',
                 credentials: 'include'
             })
@@ -95,7 +95,7 @@ const SingleBlog = () => {
     const handleUpdate = async function (commentId) {
         console.log('')
         try {
-            const response = await fetch(`http://localhost:4000/updateComment/${id}/${commentId}`, {
+            const response = await fetch(`https://socialmedia-backend.vercel.app/updateComment/${id}/${commentId}`, {
                 method: 'POST',
                 body: JSON.stringify({ message }),
                 headers: { 'Content-Type': "application/json" },
@@ -126,13 +126,13 @@ const SingleBlog = () => {
                 <div className='flex flex-col justify-start items-start m-auto w-[70%]'>
                     <p className='text-3xl font-bold'>Post</p>
                     <p className='text-md text-left font-medium mb-3'>{description}</p>
-                    {img ? (<img className='mb-3 w-[50%]' src={`http://localhost:4000/${img}`}></img>) : ''}
+                    {img ? (<img className='mb-3 w-[50%]' src={`https://socialmedia-backend.vercel.app/${img}`}></img>) : ''}
                     <div className='w-[70%]'>
                         <h1 className='text-2xl font-bold'>Comments</h1>
                         {comments.map(comment => (
                             <div className='bg-gray-200 px-3 py-2 m-2'>
                                 <div className='flex justify-start items-center gap-3'>
-                                    <p className='w-[10%%] mb-3'><img className='rounded-[30px] w-[50px] h-[50px]' src={`http://localhost:4000/${comment.userId.profileImage}`}></img></p>
+                                    <p className='w-[10%%] mb-3'><img className='rounded-[30px] w-[50px] h-[50px]' src={`https://socialmedia-backend.vercel.app/${comment.userId.profileImage}`}></img></p>
                                     <p className='text-xl text-center font-semibold mb-3'>{comment.userId.name}</p>
                                 </div>
                                 <div className='flex items-center'>

@@ -18,7 +18,7 @@ const UpdateBlog = () => {
     useEffect(function () {
         const fetchData = async function () {
             try {
-                const response = await fetch(`http://localhost:4000/singlePost/${id}`, {
+                const response = await fetch(`https://socialmedia-backend.vercel.app/singlePost/${id}`, {
                     method: 'GET',
                     credentials: 'include'
                 })
@@ -50,7 +50,7 @@ const UpdateBlog = () => {
             const formData = new FormData();
             formData.append('pic', file); // Append file to FormData
             formData.append('description', description);
-            const response = await fetch(`http://localhost:4000/updatePost/${id}`, {
+            const response = await fetch(`https://socialmedia-backend.vercel.app/updatePost/${id}`, {
                 method: 'PATCH',
                 credentials: 'include',
                 body: formData
@@ -84,7 +84,7 @@ const UpdateBlog = () => {
                             onChange={function (e) { setDescription(e.target.value) }} aria-describedby="emailHelp" />
                     </div>
                     <input type='file' accept='image/*' onChange={handle}></input>
-                    <img className='my-3 w-[50%]' src={`http://localhost:4000/${img}`}></img>
+                    <img className='my-3 w-[50%]' src={`https://socialmedia-backend.vercel.app/${img}`}></img>
                     <button className='text-white bg-black rounded px-4 py-2 transform transition-transform duration-200 hover:scale-110 hover:bg-blue-700' onClick={handleSubmit}>Update Blog</button>
 
                 </div>

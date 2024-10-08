@@ -14,7 +14,7 @@ const Otp = () => {
     console.log('click')
     try {
       e.preventDefault();
-      const response = await fetch('http://localhost:4000/submit-otp', {
+      const response = await fetch('https://socialmedia-backend.vercel.app/submit-otp', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ otp, updatePassword }),

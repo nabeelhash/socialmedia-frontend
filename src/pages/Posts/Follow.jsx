@@ -24,7 +24,7 @@ const Follow = () => {
     useEffect(function () {
         const fetchData = async function () {
             try {
-                const response = await fetch('http://localhost:4000/allUsers', {
+                const response = await fetch('https://socialmedia-backend.vercel.app/allUsers', {
                     method: 'GET',
                     credentials: 'include'
                 })
@@ -50,7 +50,7 @@ const Follow = () => {
     useEffect(function () {
         const fetchData = async function () {
             try {
-                const response = await fetch('http://localhost:4000/following', {
+                const response = await fetch('https://socialmedia-backend.vercel.app/following', {
                     method: 'GET',
                     credentials: 'include'
                 })
@@ -73,7 +73,7 @@ const Follow = () => {
     const handleFollow = async function (id) {
         try {
             console.log('click')
-            let response = await fetch(`http://localhost:4000/follow/${id}`, {
+            let response = await fetch(`https://socialmedia-backend.vercel.app/follow/${id}`, {
                 method: 'GET',
                 credentials: 'include'
             })
@@ -95,7 +95,7 @@ const Follow = () => {
     const handleUnfollow = async function (id) {
         try {
             console.log('click')
-            let response = await fetch(`http://localhost:4000/unfollow/${id}`, {
+            let response = await fetch(`https://socialmedia-backend.vercel.app/unfollow/${id}`, {
                 method: 'GET',
                 credentials: 'include'
             })
@@ -136,7 +136,7 @@ const Follow = () => {
                                         <tr key={info._id}>
                                             {auth.user._id !== info._id ?
                                             <>
-                                        <td className='w-fit'><img className='w-[50px] h-[50px] rounded-[30px]' src={`http://localhost:4000/${info.profileImage}`}></img></td>
+                                        <td className='w-fit'><img className='w-[50px] h-[50px] rounded-[30px]' src={`https://socialmedia-backend.vercel.app/${info.profileImage}`}></img></td>
                                         <td>{info.name}</td>
                                         <td className='flex gap-2'>
                                             <button onClick={() => handleFollow(info._id)} className='btn btn-primary text-white transform transition-transform duration-200 hover:scale-105'>Follow</button>

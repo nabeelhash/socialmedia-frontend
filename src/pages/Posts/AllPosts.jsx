@@ -28,7 +28,7 @@ const AllBlogs = () => {
     useEffect(function () {
         const fetchData = async function () {
             try {
-                const response = await fetch('http://localhost:4000/allPosts', {
+                const response = await fetch('https://socialmedia-backend.vercel.app/allPosts', {
                     method: 'GET',
                     credentials: 'include'
                 })
@@ -54,7 +54,7 @@ const AllBlogs = () => {
             return
         }
         try {
-            let response = await fetch(`http://localhost:4000/deletePost/${id}`, {
+            let response = await fetch(`https://socialmedia-backend.vercel.app/deletePost/${id}`, {
                 method: 'DELETE',
                 credentials: 'include',
             });
@@ -74,7 +74,7 @@ const AllBlogs = () => {
 
     const handleLike = async function (id) {
         try {
-            let response = await fetch(`http://localhost:4000/like/${id}`, {
+            let response = await fetch(`https://socialmedia-backend.vercel.app/like/${id}`, {
                 method: 'GET',
                 credentials: 'include',
             });
@@ -94,7 +94,7 @@ const AllBlogs = () => {
 
     const handleDislike = async function (id) {
         try {
-            let response = await fetch(`http://localhost:4000/dislike/${id}`, {
+            let response = await fetch(`https://socialmedia-backend.vercel.app/dislike/${id}`, {
                 method: 'GET',
                 credentials: 'include',
             });
@@ -113,7 +113,7 @@ const AllBlogs = () => {
 
     const handleComment = async function (id) {
         try {
-            let response = await fetch(`http://localhost:4000/comment/${id}`, {
+            let response = await fetch(`https://socialmedia-backend.vercel.app/comment/${id}`, {
                 method: 'POST',
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ message }),
@@ -150,7 +150,7 @@ const AllBlogs = () => {
                         <div key={post._id} className='flex flex-col w-[90%] md:w-[90%] lg:w-[90%] justify-start items-center rounded  px-4 my-4 py-4 bg-white'>
                             <div className='flex justify-between items-center gap-3 w-full'>
                                 <div className='flex justify-center items-center gap-3'>
-                                    <p className='w-[10%%] mb-3'>{post.author ? <img className='rounded-[30px] w-[50px] h-[50px]' src={`http://localhost:4000/${post.author.profileImage}`}></img> : 'Author not found'}</p>
+                                    <p className='w-[10%%] mb-3'>{post.author ? <img className='rounded-[30px] w-[50px] h-[50px]' src={`https://socialmedia-backend.vercel.app/${post.author.profileImage}`}></img> : 'Author not found'}</p>
                                     <p className='text-xl text-center font-semibold mb-3'>{post.author ? post.author.name : 'Author not found'}</p>
                                 </div>
                                 <div className='text-2xl'>
@@ -168,7 +168,7 @@ const AllBlogs = () => {
                             </div>
                             <p className='text-lg w-full text-left font-medium mb-3'>{post.description}</p>
                             <div className='text-left'>
-                                {post.postImage ? (<img className='mb-3 w-[100%]' src={`http://localhost:4000/${post.postImage}`}></img>) : ('')}
+                                {post.postImage ? (<img className='mb-3 w-[100%]' src={`https://socialmedia-backend.vercel.app/${post.postImage}`}></img>) : ('')}
                             </div>
 
                             <div className='flex w-full justify-between items-center gap-2'>

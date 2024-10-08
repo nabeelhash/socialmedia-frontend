@@ -12,7 +12,7 @@ const ForgetPassword = () => {
     console.log('click')
     try {
       e.preventDefault();
-      const response = await fetch('http://localhost:4000/send-otp', {
+      const response = await fetch('https://socialmedia-backend.vercel.app/send-otp', {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),

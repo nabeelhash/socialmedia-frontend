@@ -11,7 +11,7 @@ const Rightbar = () => {
     useEffect(function () {
         const fetchData = async function () {
             try {
-                const response = await fetch('http://localhost:4000/allUsers', {
+                const response = await fetch('https://socialmedia-backend.vercel.app/allUsers', {
                     method: 'GET',
                     credentials: 'include'
                 })
