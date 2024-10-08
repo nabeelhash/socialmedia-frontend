@@ -37,7 +37,7 @@ const AllBlogs = () => {
                 }
                 const result = await response.json();
                 console.log(result)
-                toast.success('All Blogs Here')
+                // toast.success('All Blogs Here')
                 setPosts(result)
             }
             catch (error) {

@@ -43,7 +43,7 @@ const Profile = () => {
                     credentials: 'include'
                 })
                 if (!response.ok) {
-                    return toast.error('Something went wrong')
+                    // return toast.error('Something went wrong')
                 }
                 const result = await response.json();
                 console.log(result)
@@ -72,7 +72,7 @@ const Profile = () => {
                     credentials: 'include'
                 })
                 if (!response.ok) {
-                    return toast.error('Something went wrong')
+                    // return toast.error('Something went wrong')
                 }
                 const result = await response.json();
                 console.log(result)
@@ -113,6 +113,7 @@ const Profile = () => {
 
     const handleCoverUpload = async function (e) {
         const file = e.target.files[0]
+        
         try {
             const formData = new FormData();
             formData.append('pic', file)
