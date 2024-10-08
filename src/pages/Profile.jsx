@@ -135,8 +135,8 @@ const Profile = () => {
             toast.error('An error occurred');
         }
     }
-    const imgUrl = `http://localhost:4000/${img}`
-    const imgCoverUrl = `http://localhost:4000/${coverImg}`
+    const imgUrl = `https://socialmedia-backend.vercel.app/${img}`
+    const imgCoverUrl = `https://socialmedia-backend.vercel.app/${coverImg}`
 
     const createPost = async function (e) {
         e.preventDefault()
