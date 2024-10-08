@@ -98,7 +98,10 @@ const Profile = () => {
                 credentials: 'include',
             });
             if (!response.ok) {
+                const errorResponse = await response.text(); // Get response text
+                console.error('Error response:', errorResponse);
                 return toast.error('Image upload failed');
+            
             }
             const result = await response.json()
             setImg(result.profileImage)
