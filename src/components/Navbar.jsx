@@ -45,7 +45,7 @@ const Navbar = () => {
     <div className="sticky top-0 w-[100%] h-[10%] flex flex-col justify-center bg-gray-700 text-white z-10">
       <div className='flex justify-between items-center py-3 px-10 md:py-3 md:px-16 '>
         <div className='text-3xl font-bold'>
-            <Link to={'/'}>Nabeel</Link>
+            <Link to={'/'} className=''>Social Media</Link>
         </div>
         <div className='text-[16px] font-semibold hidden lg:block'>
             <ul className='flex '>
