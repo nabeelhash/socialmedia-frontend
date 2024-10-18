@@ -263,7 +263,7 @@ const Profile = () => {
 
                     <div className='flex flex-col relative w-full h-[300px] md:h-[600px]'>
                         <img src={imgCoverUrl} className='w-[100%] h-[600px] object-cover'></img>
-                        <img src={imgUrl} className='w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] rounded-[100px] border-3 border-white absolute top-[92%] left-[12%] sm:top-[100%] sm:left-[12%] md:top-[90%] md:left-[15%] lg:top-[90%] lg:left-[12%] transform -translate-x-[50%] -translate-y-[50%]'></img>
+                        <img src={img} className='w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] rounded-[100px] border-3 border-white absolute top-[92%] left-[12%] sm:top-[100%] sm:left-[12%] md:top-[90%] md:left-[15%] lg:top-[90%] lg:left-[12%] transform -translate-x-[50%] -translate-y-[50%]'></img>
                         <div className='z-10 absolute top-[10%] left-[90%] transform -translate-x-[50%] -translate-y-[50%] text-white'>
                             <div class="dropdown">
                                 <button data-bs-toggle="dropdown" aria-expanded="false">
@@ -324,7 +324,7 @@ const Profile = () => {
                     <div className='flex bg-gray-200 w-[100%] py-20'>
                         <div className='w-[90%] px-8 py-4 mx-auto bg-white rounded flex flex-col gap-3'>
                             <div className='flex items-center justify-center gap-3'>
-                                <img src={imgUrl} className='w-[45px] h-[45px] rounded-[50px]'></img>
+                                <img src={img} className='w-[45px] h-[45px] rounded-[50px]'></img>
                                 <textarea type="text" value={description} onChange={function (e) { setDescription(e.target.value) }} className='w-full h-[30px] px-2 py-1' placeholder='Whats in your mind?' />
                             </div>
                             <div className='flex justify-around md:justify-between'>
@@ -341,7 +341,7 @@ const Profile = () => {
                             <div key={post._id} className='flex flex-col bg-white w-[90%] md:w-[70%] lg:w-[100%] justify-start items-center rounded  px-4 my-4 py-4'>
                                 <div className='flex justify-between items-center gap-3 w-full'>
                                     <div className='flex justify-center items-center gap-3'>
-                                        <p className='w-[10%%] mb-3'>{post.author ? <img className='rounded-[30px] w-[50px] h-[50px]' src={`https://socialmedia-backend.vercel.app/${post.author.profileImage}`}></img> : 'Author not found'}</p>
+                                        <p className='w-[10%%] mb-3'>{post.author ? <img className='rounded-[30px] w-[50px] h-[50px]' src={`${post.author.profileImage}`}></img> : 'Author not found'}</p>
                                         <p className='text-xl text-center font-semibold mb-3'>{post.author ? post.author.name : 'Author not found'}</p>
                                     </div>
                                     <div className='text-2xl'>
