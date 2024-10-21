@@ -135,7 +135,7 @@ const Blocklist = () => {
                                         <tr key={info._id}>
                                             {auth.user._id !== info._id ?
                                                 <>
-                                                    <td className='w-fit'><img className='w-[50px] h-[50px] rounded-[30px]' src={`https://socialmedia-backend.vercel.app/${info.profileImage}`}></img></td>
+                                                    <td className='w-fit'><img className='w-[50px] h-[50px] rounded-[30px]' src={`${info.profileImage}`}></img></td>
                                                     <td>{info.name}</td>
                                                     <td className='flex gap-2'>
                                                         <button onClick={() => handleBlock(info._id)} className='btn btn-primary text-white transform transition-transform duration-200 hover:scale-105'>Block</button>

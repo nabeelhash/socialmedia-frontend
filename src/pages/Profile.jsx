@@ -262,7 +262,7 @@ const Profile = () => {
                 <div className='w-[100%] flex flex-col justify-start items-start m-auto md:p-3 bg-gray-200'>
 
                     <div className='flex flex-col relative w-full h-[300px] md:h-[600px]'>
-                        <img src={imgCoverUrl} className='w-[100%] h-[600px] object-cover'></img>
+                        <img src={coverImg} className='w-[100%] h-[600px] object-cover'></img>
                         <img src={img} className='w-[70px] h-[70px] sm:w-[100px] sm:h-[100px] md:w-[150px] md:h-[150px] lg:w-[200px] lg:h-[200px] rounded-[100px] border-3 border-white absolute top-[92%] left-[12%] sm:top-[100%] sm:left-[12%] md:top-[90%] md:left-[15%] lg:top-[90%] lg:left-[12%] transform -translate-x-[50%] -translate-y-[50%]'></img>
                         <div className='z-10 absolute top-[10%] left-[90%] transform -translate-x-[50%] -translate-y-[50%] text-white'>
                             <div class="dropdown">
@@ -359,7 +359,7 @@ const Profile = () => {
                                 </div>
                                 <p className='text-lg w-full text-left font-medium mb-3'>{post.description}</p>
                                 <div className='text-left'>
-                                    {post.postImage ? (<img className='mb-3 w-[100%]' src={`https://socialmedia-backend.vercel.app/${post.postImage}`}></img>) : ('')}
+                                    {post.postImage ? (<img className='mb-3 w-[100%]' src={`${post.postImage}`}></img>) : ('')}
                                 </div>
 
                                 <div className='flex w-full justify-between items-center gap-2'>

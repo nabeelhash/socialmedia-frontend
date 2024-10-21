@@ -150,7 +150,7 @@ const AllBlogs = () => {
                         <div key={post._id} className='flex flex-col w-[90%] md:w-[90%] lg:w-[90%] justify-start items-center rounded  px-4 my-4 py-4 bg-white'>
                             <div className='flex justify-between items-center gap-3 w-full'>
                                 <div className='flex justify-center items-center gap-3'>
-                                    <p className='w-[10%%] mb-3'>{post.author ? <img className='rounded-[30px] w-[50px] h-[50px]' src={`https://socialmedia-backend.vercel.app/${post.author.profileImage}`}></img> : 'Author not found'}</p>
+                                    <p className='w-[10%%] mb-3'>{post.author ? <img className='rounded-[30px] w-[50px] h-[50px]' src={`${post.author.profileImage}`}></img> : 'Author not found'}</p>
                                     <p className='text-xl text-center font-semibold mb-3'>{post.author ? post.author.name : 'Author not found'}</p>
                                 </div>
                                 <div className='text-2xl'>
@@ -168,7 +168,7 @@ const AllBlogs = () => {
                             </div>
                             <p className='text-lg w-full text-left font-medium mb-3'>{post.description}</p>
                             <div className='text-left'>
-                                {post.postImage ? (<img className='mb-3 w-[100%]' src={`https://socialmedia-backend.vercel.app/${post.postImage}`}></img>) : ('')}
+                                {post.postImage ? (<img className='mb-3 w-[100%]' src={`${post.postImage}`}></img>) : ('')}
                             </div>
 
                             <div className='flex w-full justify-between items-center gap-2'>
